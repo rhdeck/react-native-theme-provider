@@ -1,0 +1,26 @@
+{
+  "name": "@raydeck/react-native-theme-provider",
+  "version": "1.0.0",
+  "description": "Theme provider for react native - appearance-aware",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhdeck/react-native-theme-provider.git"
+  },
+  "author": "Ray Deck",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhdeck/react-native-theme-provider/issues"
+  },
+  "homepage": "https://github.com/rhdeck/react-native-theme-provider#readme",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.62.2"
+  },
+  "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0"
+  }
+}
