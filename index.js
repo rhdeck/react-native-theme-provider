@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-import { useTheme, ThemeProvider } from "@callstack/react-theme-provider";
+import { createTheming } from "@callstack/react-theme-provider";
 import { useColorScheme } from "react-native";
-
+const { useTheme, ThemeProvider } = createTheming({});
 const P = ({ theme: propTheme, ...props }) => {
   const scheme = useColorScheme();
   const theme = useMemo(() => {
