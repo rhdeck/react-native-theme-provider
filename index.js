@@ -17,7 +17,7 @@ const useStyles = (f) => {
     if (typeof f === "function") return f(theme, isDark);
     else if (f[scheme]) return f[scheme];
     else return f;
-  }, [f, appearance, theme]);
+  }, [f, theme]);
   return styles;
 };
 export default P;
