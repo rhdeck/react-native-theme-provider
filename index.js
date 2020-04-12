@@ -11,14 +11,14 @@ const P = ({ theme: propTheme, ...props }) => {
   }, [scheme, propTheme]);
   return <ThemeProvider {...props} theme={theme} />;
 };
-const useStyles = (f) => {
+const useStyles = (f, options) => {
   const isDark = useColorScheme() === "dark";
   const theme = useTheme();
   const styles = useMemo(() => {
     if (typeof f === "function") return f(theme, isDark);
     else if (f[scheme]) return f[scheme];
     else return f;
-  }, [f, theme, isDark]);
+  }, [f, theme, isDark, options]);
   return styles;
 };
 export default P;
