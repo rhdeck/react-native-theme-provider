@@ -5,6 +5,7 @@ const { useTheme, ThemeProvider } = createTheming({});
 const P = ({ theme: propTheme, ...props }) => {
   const scheme = useColorScheme();
   const theme = useMemo(() => {
+    if (!propTheme) return {};
     if (typeof propTheme === "function") return propTheme(scheme);
     else if (propTheme[scheme]) return propTheme[app];
   }, [scheme, propTheme]);
@@ -17,7 +18,7 @@ const useStyles = (f) => {
     if (typeof f === "function") return f(theme, isDark);
     else if (f[scheme]) return f[scheme];
     else return f;
-  }, [f, theme]);
+  }, [f, theme, isDark]);
   return styles;
 };
 export default P;
