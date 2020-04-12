@@ -12,7 +12,8 @@ const P = ({ theme: propTheme, ...props }) => {
   return <ThemeProvider {...props} theme={theme} />;
 };
 const useStyles = (f, options) => {
-  const isDark = useColorScheme() === "dark";
+  const scheme = useColorScheme();
+  const isDark = scheme === "dark";
   const theme = useTheme();
   const styles = useMemo(() => {
     if (typeof f === "function") return f(theme, isDark, options);
