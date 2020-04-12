@@ -16,6 +16,7 @@ const useStyles = (f, options) => {
   const isDark = scheme === "dark";
   const theme = useTheme();
   const styles = useMemo(() => {
+    if (!f) throw "No styles object or func provided to useStyles";
     if (typeof f === "function") return f(theme, isDark, options);
     else if (f[scheme]) return f[scheme];
     else return f;
