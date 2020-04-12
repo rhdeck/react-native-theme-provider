@@ -15,7 +15,7 @@ const useStyles = (f, options) => {
   const isDark = useColorScheme() === "dark";
   const theme = useTheme();
   const styles = useMemo(() => {
-    if (typeof f === "function") return f(theme, isDark);
+    if (typeof f === "function") return f(theme, isDark, options);
     else if (f[scheme]) return f[scheme];
     else return f;
   }, [f, theme, isDark, options]);
