@@ -1,6 +1,6 @@
 {
   "name": "@raydeck/react-native-theme-provider",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Theme provider for react native - appearance-aware",
   "main": "index.js",
   "scripts": {
