@@ -21,6 +21,7 @@
     "react-native": "^0.62.2"
   },
   "dependencies": {
-    "@callstack/react-theme-provider": "^2.1.0"
+    "@callstack/react-theme-provider": "^2.1.0",
+    "@react-native-community/hooks": "^2.4.9"
   }
 }

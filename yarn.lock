@@ -10,6 +10,11 @@
     deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
 
+"@react-native-community/hooks@^2.4.9":
+  version "2.4.9"
+  resolved "https://registry.yarnpkg.com/@react-native-community/hooks/-/hooks-2.4.9.tgz#c94966ac2b278acf0384d53cee996da6960d1ec3"
+  integrity sha512-7dNpI5ytcWhKJAle3E7GMAxuZ7qj2Cmy1zAjTJJb0j+ylW7dsUJ6Ny2kwzAZA6qdDl3T4rZnTuxisUC0U2ImSA==
+
 deepmerge@^3.2.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-3.3.0.tgz#d3c47fd6f3a93d517b14426b0628a17b0125f5f7"

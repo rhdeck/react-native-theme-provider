@@ -1,9 +1,21 @@
 import React, { useMemo } from "react";
 import { createTheming } from "@callstack/react-theme-provider";
-import { useColorScheme } from "react-native";
+import { useColorScheme, Appearance } from "react-native";
+import { useAppState } from "react-native";
 const { useTheme, ThemeProvider } = createTheming({});
+const useStateColorScheme = () => {
+  const [scheme, setScheme] = useState(Appearance.getColorScheme());
+  const ucsScheme = useColorScheme();
+  useEffect(() => {
+    setScheme(ucsScheme);
+  }, [ucsScheme]);
+  const state = useAppState();
+  useEffect(() => {
+    setScheme(Appaearance.getColorScheme());
+  }, [state]);
+};
 const P = ({ theme: propTheme, ...props }) => {
-  const scheme = useColorScheme();
+  const scheme = useStateColorScheme();
   const theme = useMemo(() => {
     if (!propTheme) return {};
     if (typeof propTheme === "function") return propTheme(scheme);
