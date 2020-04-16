@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { createTheming } from "@callstack/react-theme-provider";
 import { useColorScheme, Appearance } from "react-native";
-import { useAppState } from "react-native";
+import { useAppState } from "@react-native-community/hooks";
 const { useTheme, ThemeProvider } = createTheming({});
 const useStateColorScheme = () => {
   const [scheme, setScheme] = useState(Appearance.getColorScheme());
@@ -11,8 +11,10 @@ const useStateColorScheme = () => {
   }, [ucsScheme]);
   const state = useAppState();
   useEffect(() => {
-    setScheme(Appaearance.getColorScheme());
+    setScheme((scheme) => Appearance.getColorScheme());
   }, [state]);
+  console.log("new color scheme is ", scheme);
+  return scheme;
 };
 const P = ({ theme: propTheme, ...props }) => {
   const scheme = useStateColorScheme();
@@ -24,7 +26,7 @@ const P = ({ theme: propTheme, ...props }) => {
   return <ThemeProvider {...props} theme={theme} />;
 };
 const useStyles = (f, options) => {
-  const scheme = useColorScheme();
+  const scheme = useStateColorScheme();
   const isDark = scheme === "dark";
   const theme = useTheme();
   const styles = useMemo(() => {
