@@ -10,6 +10,13 @@
     deepmerge "^3.2.0"
     hoist-non-react-statics "^3.3.0"
 
+"@raydeck/usecolorscheme@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@raydeck/usecolorscheme/-/usecolorscheme-1.0.0.tgz#1eb42da1c0ecb1ac8b26e712d272a3bcfe47ccbb"
+  integrity sha512-L+qk3TLkIJKxgQ3k5pJXhqy1u2VMRUF+nHlQimfaJ9zz2OyCdGhMFi5FDMu++ZwvAoQJK1+49KBFWQSwOM8uRg==
+  dependencies:
+    "@react-native-community/hooks" "^2.4.9"
+
 "@react-native-community/hooks@^2.4.9":
   version "2.4.9"
   resolved "https://registry.yarnpkg.com/@react-native-community/hooks/-/hooks-2.4.9.tgz#c94966ac2b278acf0384d53cee996da6960d1ec3"

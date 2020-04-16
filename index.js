@@ -1,21 +1,7 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo } from "react";
 import { createTheming } from "@callstack/react-theme-provider";
-import { useColorScheme, Appearance } from "react-native";
-import { useAppState } from "@react-native-community/hooks";
+import useStateColorScheme from "@raydeck/usecolorscheme";
 const { useTheme, ThemeProvider } = createTheming({});
-const useStateColorScheme = () => {
-  const [scheme, setScheme] = useState(Appearance.getColorScheme());
-  const ucsScheme = useColorScheme();
-  useEffect(() => {
-    setScheme(ucsScheme);
-  }, [ucsScheme]);
-  const state = useAppState();
-  useEffect(() => {
-    setScheme((scheme) => Appearance.getColorScheme());
-  }, [state]);
-  console.log("new color scheme is ", scheme);
-  return scheme;
-};
 const P = ({ theme: propTheme, ...props }) => {
   const scheme = useStateColorScheme();
   const theme = useMemo(() => {

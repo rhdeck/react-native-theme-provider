@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@callstack/react-theme-provider": "^2.1.0",
+    "@raydeck/usecolorscheme": "^1.0.0",
     "@react-native-community/hooks": "^2.4.9"
   }
 }
